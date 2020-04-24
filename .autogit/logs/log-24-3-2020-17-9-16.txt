@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Fri Apr 24 2020 17:09:16 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/environments/environment.ts
+* src/index.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
