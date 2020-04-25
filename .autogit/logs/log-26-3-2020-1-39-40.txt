@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 01:39:40 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* .firebase/hosting.ZGlzdC9NeUZpcmVCYXNlUHJvamVjdA.cache
+* src/app/add-sudent-info/add-sudent-info.component.html
+* src/app/app-routing.module.ts
+* src/app/app.component.html
+* src/app/list-of-student/list-of-student.component.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

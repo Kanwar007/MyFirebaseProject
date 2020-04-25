@@ -19,6 +19,7 @@ export class AddSudentInfoComponent implements OnInit {
     City: new FormControl(""),
     State: new FormControl(""),
     Country: new FormControl(""),
+    Email: new FormControl(""),
     completed:  new FormControl(false)
   }
 

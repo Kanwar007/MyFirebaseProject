@@ -20,33 +20,59 @@
   />
   <label for="last_name">Last Name</label>
 </div>
+
+<div class="input-field col s6">
+    <input
+    placeholder="Student Phone"
+    formControlName="Phone"
+    type="number"
+    class="input-field col s6"
+  />
+  <label for="last_name">Phone</label>
+</div>
+<div class="input-field col s6">
+    <input
+    placeholder="Student Email"
+    formControlName="Email"
+    type="text"
+    class="input-field col s6"
+  />
+  <label for="last_name">Email</label>
+</div>
 </div>
 
   
-  <input
-  placeholder="Student Phone"
-  formControlName="Phone"
-  type="number"
-  class="input-field col s12"
-/>
-<input
-placeholder="Student City Name"
-formControlName="City"
-type="text"
-class="input-field col s12"
-/>
-<input
-placeholder="Student State Name"
-formControlName="State"
-type="text"
-class="input-field col s12"
-/>
-<input
-placeholder="Student Country Name"
-formControlName="Country"
-type="text"
-class="input-field col s12"
-/>
+<div class="row">
+    <div class="input-field col s6">
+        <input
+        placeholder="Student City Name"
+        formControlName="City"
+        type="text"
+        class="input-field col s12"
+        />
+        <label for="last_name">City</label>
+    </div>
+    <div class="input-field col s6">
+
+    <input
+    placeholder="Student State Name"
+    formControlName="State"
+    type="text"
+    class="input-field col s12"
+    />
+    <label for="last_name">State</label>
+    </div>
+    <div class="input-field col s6">
+    <input
+    placeholder="Student Country Name"
+    formControlName="Country"
+    type="text"
+    class="input-field col s12"
+   />
+   <label for="last_name">Country</label>
+</div>
+</div>
+
 
 <button class="waves-effect waves-light btn col s12" (click)="onSubmit()">
     Submit
