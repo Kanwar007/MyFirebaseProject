@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule }         from '@angular/forms';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { ListOfStudentComponent } from './list-of-student/list-of-student.component';
@@ -17,6 +18,8 @@ import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],

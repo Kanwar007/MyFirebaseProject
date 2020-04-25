@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 00:39:21 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* .firebase/hosting.ZGlzdC9NeUZpcmVCYXNlUHJvamVjdA.cache
+* src/app/list-of-student/list-of-student.component.ts
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

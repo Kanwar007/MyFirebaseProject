@@ -1,1 +1,43 @@
-<p>add-sudent-info works!</p>
+<h5>Student Information Resgister</h5>
+<form [formGroup]="studentform">
+    <input
+    placeholder="Student Name"
+    formControlName="FirstName"
+    type="text"
+    class="input-field col s12"
+  />
+  <input
+    placeholder="Student Last Name"
+    formControlName="LastName"
+    type="text"
+    class="input-field col s12"
+  />
+  <input
+  placeholder="Student Phone"
+  formControlName="Phone"
+  type="number"
+  class="input-field col s12"
+/>
+<input
+placeholder="Student City Name"
+formControlName="City"
+type="text"
+class="input-field col s12"
+/>
+<input
+placeholder="Student State Name"
+formControlName="State"
+type="text"
+class="input-field col s12"
+/>
+<input
+placeholder="Student Country Name"
+formControlName="Country"
+type="text"
+class="input-field col s12"
+/>
+
+<button class="waves-effect waves-light btn col s12" (click)="onSubmit()">
+    Submit
+  </button>
+</form>
