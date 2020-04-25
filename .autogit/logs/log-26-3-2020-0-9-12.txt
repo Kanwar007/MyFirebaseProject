@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 00:09:12 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/app/list-of-student/list-of-student.component.html
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

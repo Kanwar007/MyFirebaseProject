@@ -14,6 +14,7 @@ export class FireBaseOperationService {
    return this.firestore
       .collection('student')
       .snapshotChanges();
+     
   }
   addStudentInfo(){
 
@@ -21,7 +22,12 @@ export class FireBaseOperationService {
   updateStudent(){
 
   }
-  deleteStudent(){
-    
+  deleteStudent(student){
+    console.log(student)
+    this.firestore.collection('student')
+        .doc(student.payload.doc.id)
+        .delete();
+
+
   }
 }

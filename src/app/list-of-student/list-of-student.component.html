@@ -12,12 +12,19 @@
       </tr>
     </thead>
     <tr *ngFor="let student of studentlist">
-        <td>{{student.payload.doc.data()}}</td>
-       <!-- <td>{{student.payload.doc.data().ID}}</td>-->
+        <td>{{student.payload.doc.id}}</td>
         <td>{{student.payload.doc.data().FirstName}}</td>
         <td>{{student.payload.doc.data().LastName}}</td>
         <td>{{student.payload.doc.data().Phone}}</td>
         <td>{{student.payload.doc.data().City}}</td>
         <td>{{student.payload.doc.data().State}}</td>
         <td>{{student.payload.doc.data().Country}}</td>
+
+        <td
+        [hidden]="student.payload.doc.data().completed"
+        (click)="removeStudent(student)"
+      >
+        <i class="material-icons">delete_forever</i>
+      </td>
+    </tr>
 </table>

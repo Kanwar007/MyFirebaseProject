@@ -13,12 +13,21 @@ export class ListOfStudentComponent implements OnInit {
 
   ngOnInit(): void {
     this.getStudent();
+   
   }
   getStudent= ()=>{
         this.operationSevice.getStudentData()
       .subscribe(resp =>
-        (this.studentlist = resp)
+        ( 
+          this.studentlist = resp
+        )
+       
         );
   }
+  removeStudent= data=>this.operationSevice.deleteStudent(data)
+    
+
+  }
+  
 
 }
