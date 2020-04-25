@@ -11,6 +11,17 @@ export class FireBaseOperationService {
 
   }
   getStudentData(){
+   return this.firestore
+      .collection('student')
+      .snapshotChanges();
+  }
+  addStudentInfo(){
+
+  }
+  updateStudent(){
+
+  }
+  deleteStudent(){
     
   }
 }

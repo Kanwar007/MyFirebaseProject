@@ -1,0 +1,23 @@
+<p>List of Student </p>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let student of studentlist">
+        <td>{{student.payload.doc}}</td>
+       <!-- <td>{{student.payload.doc.data().ID}}</td>-->
+        <td>{{student.payload.doc.data().FirstName}}</td>
+        <td>{{student.payload.doc.data().LastName}}</td>
+        <td>{{student.payload.doc.data().Phone}}</td>
+        <td>{{student.payload.doc.data().City}}</td>
+        <td>{{student.payload.doc.data().State}}</td>
+        <td>{{student.payload.doc.data().Country}}</td>
+</table>
