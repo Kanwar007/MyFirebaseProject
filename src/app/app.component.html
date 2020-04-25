@@ -1,6 +1,19 @@
-<div class="container">
+<!--<div class="container">
   <div class="row">
       <app-add-sudent-info class="col s6"></app-add-sudent-info>
       <app-list-of-student class="col s6"></app-list-of-student>
   </div>
-</div>
+</div>-->
+
+
+
+<h1>Student Information </h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/list" >List of Student </a></li>
+    <li><a routerLink="/register">Register a student</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

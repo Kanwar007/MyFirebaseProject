@@ -1,17 +1,28 @@
 <h5>Student Information Register Form</h5>
-<form [formGroup]="studentform">
+<div class="row">
+<form class="col s12" [formGroup]="studentform">
+    <div class="row">
+        <div class="input-field col s6">
     <input
     placeholder="Student First Name"
     formControlName="FirstName"
     type="text"
-    class="input-field col s12"
+    class="input-field col s6"
   />
-  <input
+  <label for="first_name">First Name</label>
+</div>
+<div class="input-field col s6">
+    <input
     placeholder="Student Last Name"
     formControlName="LastName"
     type="text"
-    class="input-field col s12"
+    class="input-field col s6"
   />
+  <label for="last_name">Last Name</label>
+</div>
+</div>
+
+  
   <input
   placeholder="Student Phone"
   formControlName="Phone"
@@ -41,3 +52,4 @@ class="input-field col s12"
     Submit
   </button>
 </form>
+</div>
