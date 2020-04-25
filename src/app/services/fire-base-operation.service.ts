@@ -16,7 +16,14 @@ export class FireBaseOperationService {
       .snapshotChanges();
      
   }
-  addStudentInfo(){
+  addStudentInfo(data){
+    return new Promise<any>((resolve, reject) => {
+      this.firestore
+        .collection("student")
+        .add(data)
+        .then(res => {}, err => reject(err));
+    });
+
 
   }
   updateStudent(){

@@ -28,7 +28,17 @@ export class AddSudentInfoComponent implements OnInit {
   }
 
   onSubmit(){
-    this.studentform.value
-    console.log('Submit'+this.studentform.value.FirstName)
+   this.addSudent(this.studentform.value);
+
+    this.studentform.reset();
+  }
+  addSudent(data){
+    this.operationSevice.addStudentInfo(data).then(res=>
+       {
+         alert('Add student information');
+       }
+    
+     
+    );
   }
 }
