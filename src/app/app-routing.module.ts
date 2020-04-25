@@ -5,8 +5,11 @@ import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.compon
 
 
 const routes: Routes = [
+  
   { path: 'list', component: ListOfStudentComponent},
   { path: 'register', component: AddSudentInfoComponent },
+  { path: '',   redirectTo: '/list', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '**', component: ListOfStudentComponent },
 ];
 
 @NgModule({
