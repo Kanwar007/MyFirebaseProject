@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tr *ngFor="let student of studentlist">
-        <td>{{student.payload.doc}}</td>
+        <td>{{student.payload.doc.data()}}</td>
        <!-- <td>{{student.payload.doc.data().ID}}</td>-->
         <td>{{student.payload.doc.data().FirstName}}</td>
         <td>{{student.payload.doc.data().LastName}}</td>
