@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 12:31:00 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* angular.json
+* src/app/add-sudent-info/add-sudent-info.component.ts
+* src/app/app-routing.module.ts
+* src/app/app.module.ts
+* src/app/list-of-student/list-of-student.component.html
+
+
+Created files:
+* src/app/edit-student/edit-student.component.css
+* src/app/edit-student/edit-student.component.html
+* src/app/edit-student/edit-student.component.spec.ts
+* src/app/edit-student/edit-student.component.ts
+* src/app/shared/student.ts
+
+
+Deleted files:
+
+
+Renamed files:
