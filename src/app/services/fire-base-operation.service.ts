@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import{AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
-import { Observable } from 'rxjs';
+import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Student } from '../shared/student';
+import { Observable } from 'rxjs';
+import { take, map } from 'rxjs/operators';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class FireBaseOperationService {
-  studentsRef: AngularFireList<any>;    // Reference to Student data list, its an Observable
-  studentRef: AngularFireObject<any>;   // Reference to Student object, its an Observable too
   
-  constructor(private firestore:AngularFirestore, private firedb:AngularFireDatabase) { 
+  
+  constructor(private firestore:AngularFirestore) { 
 
   }
 
@@ -50,12 +49,24 @@ export class FireBaseOperationService {
  
 
  
-    getStudentByID(id: string){
-   return  this.firestore.collection('student').doc(id)
-                   
-    
-    
-    }
+
+    getStudentByID(id: string): Observable<T> {
+      return this.collection
+          .doc<T>(id)
+          .snapshotChanges()
+          .pipe(
+              // We want to map the document into a Typed JS Object
+              map(doc => {
+                  // Only if the entity exists should we build an object out of it
+                  if (doc.payload.exists) {
+                      const data = doc.payload.data() as T;
+                      const payloadId = doc.payload.id;
+                      return { id: payloadId, ...data };
+                  }
+              })
+          );
+  }
+  
     
   
   
