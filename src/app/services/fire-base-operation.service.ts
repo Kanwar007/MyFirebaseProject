@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import{AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
+import { Observable } from 'rxjs';
+import { Student } from '../shared/student';
 
 
 @Injectable({
@@ -46,7 +48,26 @@ export class FireBaseOperationService {
 
   // method to retrive data for model student object
   getStudentByID(id){
- return this.firestore.collection('student').get(id);
-  }
+
+    let ref = this.firestore.collection('student').doc(id)
+   
+
+
+let getDoc = ref.get()
+  .then(doc => {
+    if (!doc.exists) {
+      console.log('No such document!');
+    } else {
+      console.log('Document data:', doc.data());
+    }
+  })
+  .catch(err => {
+    console.log('Error getting document', err);
+  });
+
+    }
+  
+  
+  
 
 }
