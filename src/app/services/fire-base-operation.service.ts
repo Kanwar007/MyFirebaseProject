@@ -47,23 +47,21 @@ export class FireBaseOperationService {
   }
 
   // method to retrive data for model student object
-  getStudentByID(id){
+  getStudentByID(id:string){
 
-    let ref = this.firestore.collection('student').doc(id)
    
 
+     var docRef = this.firestore.collection("cities").doc("id");
 
-let getDoc = ref.get()
-  .then(doc => {
-    if (!doc.exists) {
-      console.log('No such document!');
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+        console.log("Document data:", doc.data());
     } else {
-      console.log('Document data:', doc.data());
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
     }
-  })
-  .catch(err => {
-    console.log('Error getting document', err);
-  });
+})
+ 
 
     }
   
