@@ -51,9 +51,10 @@ export class FireBaseOperationService {
 
  
     getStudentByID(id: string){
-    var    sref =   this.firestore.collection('student').doc(id)
-    sref.get();
-      return sref.get();
+   return  this.firestore.collection('student').doc(id)
+                   
+    
+    
     }
     
   
