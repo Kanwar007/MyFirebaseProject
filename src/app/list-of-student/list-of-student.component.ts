@@ -27,8 +27,6 @@ export class ListOfStudentComponent implements OnInit {
   removeStudent= data=>
           this.operationSevice
             .deleteStudent(data)
-    
-
   }
   
 

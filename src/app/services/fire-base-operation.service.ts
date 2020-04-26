@@ -51,13 +51,13 @@ export class FireBaseOperationService {
  
     getStudentByID(id: string){
   
-      this.firestore.collection('student').doc(id).get().subscribe(
+      this.firestore.collection('student').doc(id).valueChanges().subscribe(
         data => {
           console.log(data)
         }
       )
          
-    console.log(this.firestore.collection('student').doc(id).get())
+
     
     }
     
