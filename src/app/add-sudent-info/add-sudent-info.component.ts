@@ -12,7 +12,6 @@ export class AddSudentInfoComponent implements OnInit {
   constructor(private operationSevice:FireBaseOperationService){ }
 
   studentform = new FormGroup({
-    ID: new FormControl(""),
     FirstName: new FormControl(""),
     LastName: new FormControl(""),
     Phone: new FormControl(""),

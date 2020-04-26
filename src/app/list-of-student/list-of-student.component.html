@@ -20,13 +20,14 @@
         <td>{{student.payload.doc.data().City}}</td>
         <td>{{student.payload.doc.data().State}}</td>
         <td>{{student.payload.doc.data().Country}}</td>
-        
+        <td class="text-center action-block">
+          <!-- routerLink="/edit-student/{{student.$key}}" is refered to { path: 'edit-student/:id', component: EditStudentComponent } in app-routing.moudles.ts -->
+          <i class="far fa-edit" routerLink="/edit-student/{{student.payload.doc.id}}"></i></td>
 
         <td
         [hidden]="student.payload.doc.data().completed"
-        (click)="removeStudent(student)"
-      >
+        (click)="removeStudent(student)">
         <i class="material-icons">delete_forever</i>
-      </td>
+       </td>
     </tr>
 </table>

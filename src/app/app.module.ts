@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { ListOfStudentComponent } from './list-of-student/list-of-student.component';
 import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.component';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListOfStudentComponent,
-    AddSudentInfoComponent
+    AddSudentInfoComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,
