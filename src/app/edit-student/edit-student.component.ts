@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { FireBaseOperationService } from '../services/fire-base-operation.service';
 import { Location } from '@angular/common'; 
+import { Student } from '../shared/student';
+import { database } from 'firebase';
 
 @Component({
   selector: 'app-edit-student',
@@ -11,6 +13,7 @@ import { Location } from '@angular/common';
 })
 export class EditStudentComponent implements OnInit {
   editForm: FormGroup;
+  student:Student;
   constructor(
     private fb: FormBuilder,
     private actRoute: ActivatedRoute,
@@ -23,20 +26,12 @@ export class EditStudentComponent implements OnInit {
   ngOnInit(): void {
     this.updateStudentData();
     const id = this.actRoute.snapshot.paramMap.get('id');
-    console.log(id)
-    
-   this.fireService.getStudentByID(id).subscribe(
-    data =>
-    ( 
-      console.log(data)
-    
-    )
-   
-    );
-  
-  
+   var s = this.fireService.getStudentByID(id).subscribe(
+    data =>{
+      return data;
+    });
 
-
+    this.editForm.setValue
   }
 
   updateStudentData() {
