@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 14:31:36 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/app/services/fire-base-operation.service.ts
+
+
+Created files:
+* .autogit/logs/log-26-3-2020-14-1-26.txt
+
+
+Deleted files:
+
+
+Renamed files:

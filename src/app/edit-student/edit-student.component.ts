@@ -24,8 +24,8 @@ export class EditStudentComponent implements OnInit {
     this.updateStudentData();
     const id = this.actRoute.snapshot.paramMap.get('id');
     console.log(id)
-    this.fireService.getStudentByID(id);
-
+   // this.fireService.getStudentByID(id).valueChanges();
+   console.log(this.fireService.getStudentByID(id).valueChanges())
 
 
   }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import{AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { Student } from '../shared/student';
@@ -47,23 +47,15 @@ export class FireBaseOperationService {
   }
 
   // method to retrive data for model student object
-  getStudentByID(id:string){
-
-   
-
-     var docRef = this.firestore.collection("cities").doc("id");
-
-docRef.get().then(function(doc) {
-    if (doc.exists) {
-        console.log("Document data:", doc.data());
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-})
  
 
+ 
+    getStudentByID(id: string){
+    var    sref =   this.firestore.collection('student').doc(id)
+    sref.get();
+      return sref.get();
     }
+    
   
   
   
