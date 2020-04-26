@@ -28,16 +28,17 @@ export class EditStudentComponent implements OnInit {
     const id = this.actRoute.snapshot.paramMap.get('id');   
     this.getStudentValue(id)
    }
-   
+
   getStudentValue(id){
     this.fireService.getStudentByID(id).subscribe(
       data =>{
-        console.log(data);
+        var json = JSON. stringify(data);
+        console.log(json);
+        this.editForm.setValue(data);
+
+
         
-        this.editForm.setValue({data});
-  
-      });
-  }
+  })};
 
   updateStudentData() {
   this.editForm = this.fb.group({
@@ -47,7 +48,8 @@ export class EditStudentComponent implements OnInit {
     Phone:[''],
     State:[''],
     City:[''],
-    Email:['']
+    Email:[''],
+    completed:false
   })
   }
 
