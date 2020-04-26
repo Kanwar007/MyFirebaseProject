@@ -1,5 +1,5 @@
 <h5> Student List Information</h5>
-<table>
+<table class="highlight">
     <thead>
       <tr>
         <th>ID</th>
@@ -11,7 +11,7 @@
         <th>Country</th>
       </tr>
     </thead>
-    <tr *ngFor="let student of studentlist">
+    <tr  *ngFor="let student of studentlist">
         <td>{{student.payload.doc.id}}</td>
         <td>{{student.payload.doc.data().FirstName}}</td>
         <td>{{student.payload.doc.data().LastName}}</td>
