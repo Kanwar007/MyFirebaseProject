@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 22:31:42 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/app/edit-student/edit-student.component.ts
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:

@@ -1,6 +1,4 @@
 export interface Student {
-
-    id:any,
     FirstName:String,
     LastName:String,
     City:String,

@@ -13,7 +13,7 @@ import { database } from 'firebase';
 })
 export class EditStudentComponent implements OnInit {
   editForm: FormGroup;
-  student:Student;
+  student:Student
   constructor(
     private fb: FormBuilder,
     private actRoute: ActivatedRoute,
@@ -25,13 +25,18 @@ export class EditStudentComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateStudentData();
-    const id = this.actRoute.snapshot.paramMap.get('id');
-   var s = this.fireService.getStudentByID(id).subscribe(
-    data =>{
-      return data;
-    });
-
-    this.editForm.setValue
+    const id = this.actRoute.snapshot.paramMap.get('id');   
+    this.getStudentValue(id)
+   }
+   
+  getStudentValue(id){
+    this.fireService.getStudentByID(id).subscribe(
+      data =>{
+        console.log(data);
+        
+        this.editForm.setValue({data});
+  
+      });
   }
 
   updateStudentData() {
