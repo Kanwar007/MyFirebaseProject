@@ -32,13 +32,8 @@ export class EditStudentComponent implements OnInit {
   getStudentValue(id){
     this.fireService.getStudentByID(id).subscribe(
       data =>{
-        var json = JSON. stringify(data);
-        console.log(json);
         this.editForm.setValue(data);
-
-
-        
-  })};
+      })};
 
   updateStudentData() {
   this.editForm = this.fb.group({
@@ -49,7 +44,7 @@ export class EditStudentComponent implements OnInit {
     State:[''],
     City:[''],
     Email:[''],
-    completed:false
+    completed:['false']
   })
   }
 
