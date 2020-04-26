@@ -29,6 +29,7 @@ export class FireBaseOperationService {
         .then(res => {}, err => reject(err));
     });
 
+    
 
   }
   updateStudent(){
@@ -44,4 +45,8 @@ export class FireBaseOperationService {
   }
 
   // method to retrive data for model student object
+  getStudentByID(id){
+ return this.firestore.collection('student').get(id);
+  }
+
 }

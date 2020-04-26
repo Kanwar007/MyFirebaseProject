@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sun Apr 26 2020 13:01:08 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* package-lock.json
+* package.json
+* src/app/edit-student/edit-student.component.ts
+* src/app/services/fire-base-operation.service.ts
+
+
+Created files:
+* .autogit/logs/log-26-3-2020-12-31-0.txt
+
+
+Deleted files:
+
+
+Renamed files:

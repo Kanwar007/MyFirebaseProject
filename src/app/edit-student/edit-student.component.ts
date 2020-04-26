@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { FireBaseOperationService } from '../services/fire-base-operation.service';
+import { Location } from '@angular/common'; 
 
 @Component({
   selector: 'app-edit-student',
@@ -12,13 +14,24 @@ export class EditStudentComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private actRoute: ActivatedRoute,
+    private fireService:FireBaseOperationService,
+    private location: Location,  
     private router: Router
     
     ) { }
 
   ngOnInit(): void {
     this.updateStudentData();
-    const id = this.actRoute.snapshot.paramMap.get('id')
+    const id = this.actRoute.snapshot.paramMap.get('id');
+    console.log(id)
+    this.fireService.getStudentByID(id)
+                    .subscribe(data=>{
+                      console.log(data);
+                      this.editForm.setValue(data)
+                    });
+
+
+
   }
 
   updateStudentData() {
@@ -28,7 +41,16 @@ export class EditStudentComponent implements OnInit {
     Country:[''],
     Phone:[''],
     State:[''],
-    City:['']
+    City:[''],
+    Email:['']
   })
+  }
+
+  updateForm(){
+
+  }
+   // Go back to previous component
+   goBack() {
+    this.location.back();
   }
 }
