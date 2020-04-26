@@ -51,11 +51,8 @@ export class FireBaseOperationService {
  
     getStudentByID(id: string){
   
-      this.firestore.collection('student').doc(id).valueChanges().subscribe(
-        data => {
-          console.log(data)
-        }
-      )
+      return this.firestore.collection('student').doc(id).valueChanges();
+      
          
 
     
