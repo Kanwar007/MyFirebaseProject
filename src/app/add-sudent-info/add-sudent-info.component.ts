@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FireBaseOperationService } from '../services/fire-base-operation.service';
 import { FormControl, FormGroup } from "@angular/forms";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-sudent-info',
@@ -9,7 +10,8 @@ import { FormControl, FormGroup } from "@angular/forms";
 })
 export class AddSudentInfoComponent implements OnInit {
   
-  constructor(private operationSevice:FireBaseOperationService){ }
+  constructor(private operationSevice:FireBaseOperationService,
+    private router: Router){ }
 
   studentform = new FormGroup({
     FirstName: new FormControl(""),
@@ -29,16 +31,16 @@ export class AddSudentInfoComponent implements OnInit {
 
   onSubmit(){
    this.addSudent(this.studentform.value);
-
+  
     this.studentform.reset();
+    this.router.navigate(['/list'])
   }
   addSudent(data){
-    this.operationSevice.addStudentInfo(data).then(res=>
-       {
-         alert('Add student information');
-       }
+    this.operationSevice.addStudentInfo(data);
+
     
-     
-    );
+    
+         
+    
   }
 }

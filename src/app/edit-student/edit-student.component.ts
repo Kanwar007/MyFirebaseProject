@@ -55,6 +55,10 @@ export class EditStudentComponent implements OnInit {
 
     this.fireService.updateStudent(this.editForm.value,this.id)
 
+    //this.router.navigateByUrl([/list]);
+    this.router.navigate(['/list'])
+  
+
   }
    // Go back to previous component
    goBack() {
