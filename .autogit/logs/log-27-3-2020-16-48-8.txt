@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Apr 27 2020 16:48:08 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/app/app.module.ts
+
+
+Created files:
+* .autogit/logs/log-27-3-2020-16-18-0.txt
+* src/app/shared/services/auth.service.spec.ts
+* src/app/shared/services/auth.service.ts
+* src/app/shared/services/user.ts
+
+
+Deleted files:
+
+
+Renamed files:
