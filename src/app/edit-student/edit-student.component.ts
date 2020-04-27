@@ -49,6 +49,7 @@ export class EditStudentComponent implements OnInit {
   }
 
   updateForm(){
+    console.log(this.editForm.value);
 
   }
    // Go back to previous component
