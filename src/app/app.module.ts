@@ -9,13 +9,23 @@ import { environment } from 'src/environments/environment';
 import { ListOfStudentComponent } from './list-of-student/list-of-student.component';
 import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListOfStudentComponent,
     AddSudentInfoComponent,
-    EditStudentComponent
+    EditStudentComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
