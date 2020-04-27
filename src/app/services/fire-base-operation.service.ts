@@ -33,7 +33,10 @@ export class FireBaseOperationService {
     
 
   }
-  updateStudent(){
+  updateStudent(data,id: string){
+
+     this.firestore.collection('student').doc(id)
+       .update(data).then(Response=>{alert('updated')})
 
   }
   deleteStudent(student){
@@ -44,18 +47,9 @@ export class FireBaseOperationService {
 
 
   }
-
-  // method to retrive data for model student object
- 
-
- 
     getStudentByID(id: string){
-  
       return this.firestore.collection('student').doc(id).valueChanges();
-      
-         
 
-    
     }
     
   

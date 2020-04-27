@@ -14,6 +14,7 @@ import { database } from 'firebase';
 export class EditStudentComponent implements OnInit {
   editForm: FormGroup;
   student:Student
+  id:any
   constructor(
     private fb: FormBuilder,
     private actRoute: ActivatedRoute,
@@ -25,8 +26,8 @@ export class EditStudentComponent implements OnInit {
 
   ngOnInit(): void {
     this.updateStudentData();
-    const id = this.actRoute.snapshot.paramMap.get('id');   
-    this.getStudentValue(id)
+    this.id = this.actRoute.snapshot.paramMap.get('id');   
+    this.getStudentValue(this.id)
    }
 
   getStudentValue(id){
@@ -49,7 +50,10 @@ export class EditStudentComponent implements OnInit {
   }
 
   updateForm(){
+    alert('update')
     console.log(this.editForm.value);
+
+    this.fireService.updateStudent(this.editForm.value,this.id)
 
   }
    // Go back to previous component
