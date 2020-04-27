@@ -1,0 +1,37 @@
+-------------------- Auto-Git Log --------------------
+		Mon Apr 27 2020 09:47:35 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* .firebase/hosting.ZGlzdC9NeUZpcmVCYXNlUHJvamVjdA.cache
+* src/app/app-routing.module.ts
+* src/app/app.module.ts
+
+
+Created files:
+* src/app/components/dashboard/dashboard.component.css
+* src/app/components/dashboard/dashboard.component.html
+* src/app/components/dashboard/dashboard.component.spec.ts
+* src/app/components/dashboard/dashboard.component.ts
+* src/app/components/forgot-password/forgot-password.component.css
+* src/app/components/forgot-password/forgot-password.component.html
+* src/app/components/forgot-password/forgot-password.component.spec.ts
+* src/app/components/forgot-password/forgot-password.component.ts
+* src/app/components/sign-in/sign-in.component.css
+* src/app/components/sign-in/sign-in.component.html
+* src/app/components/sign-in/sign-in.component.spec.ts
+* src/app/components/sign-in/sign-in.component.ts
+* src/app/components/sign-up/sign-up.component.css
+* src/app/components/sign-up/sign-up.component.html
+* src/app/components/sign-up/sign-up.component.spec.ts
+* src/app/components/sign-up/sign-up.component.ts
+* src/app/components/verify-email/verify-email.component.css
+* src/app/components/verify-email/verify-email.component.html
+* src/app/components/verify-email/verify-email.component.spec.ts
+* src/app/components/verify-email/verify-email.component.ts
+
+
+Deleted files:
+
+
+Renamed files:
