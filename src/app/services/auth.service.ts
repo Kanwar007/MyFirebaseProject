@@ -37,9 +37,21 @@ export class AuthService {
   {
   return this.afAuth.signInWithEmailAndPassword(email,password)
   .then((result)=> {
-    this.ngZone.run(()=>{
+    this.userData = result.user;
+
+  
+        localStorage.setItem('user', JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem('user'));
+   
+
+    localStorage.setItem('user', JSON.stringify(this.userData));
+    this.ngZone.run(()=>
+  {
+
       this.router.navigate(['list']);
     });
+    
+    this.SetUserData(result.user);
 
   }).catch((error)=>{
     window.alert(error.message)
@@ -49,6 +61,7 @@ export class AuthService {
     return this.afAuth.createUserWithEmailAndPassword(email,password)
     .then((result)=>{
       this.SetUserData(result.user);
+      this.router.navigate(['list']);
     }).catch((error)=>{
       window.alert(error.message);
     })

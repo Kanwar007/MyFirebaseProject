@@ -1,23 +1,18 @@
 <h5> Student List Information</h5>
-<div>
-  <nav class="col-md-2 d-md-block bg-light sidebar">
+
+
     <div class="sidebar-sticky">
       <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active">
-            <i class="fas fa-user"></i>User Profile
-          </a>
-        </li>
+       
         <!-- Calling SignOut() Api from AuthService -->
         <li class="nav-item">
-          <a class="nav-link" (click)="authService.SignOut()">
+          <a class="nav-link active" (click)="authService.SignOut()">
             <i class="fas fa-sign-out-alt"></i>Log out
           </a>
         </li>
       </ul>
     </div>
-  </nav>
-  </div>
+  
 <table class="highlight">
     <thead>
       <tr>
