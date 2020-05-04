@@ -11,6 +11,7 @@ import { ListOfStudentComponent } from './list-of-student/list-of-student.compon
 import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LoginComponent } from './login/login.component';
     AddSudentInfoComponent,
     EditStudentComponent,
     LoginComponent,
+    RegisterUserComponent,
   
   ],
   imports: [

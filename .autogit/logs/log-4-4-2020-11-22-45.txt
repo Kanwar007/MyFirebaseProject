@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 04 2020 11:22:45 GMT+0800 (Australian Western Standard Time)
+------------------------------------------------------
+
+Modified files:
+* src/app/app.module.ts
+
+
+Created files:
+* src/app/login/login.component.css
+* src/app/login/login.component.html
+* src/app/login/login.component.spec.ts
+* src/app/login/login.component.ts
+* src/app/services/auth.service.spec.ts
+* src/app/services/auth.service.ts
+* src/app/shared/user.ts
+
+
+Deleted files:
+
+
+Renamed files:
