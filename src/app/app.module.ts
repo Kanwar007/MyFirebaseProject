@@ -10,8 +10,6 @@ import { environment } from 'src/environments/environment';
 import { ListOfStudentComponent } from './list-of-student/list-of-student.component';
 import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterUserComponent } from './register-user/register-user.component';
 
 
 @NgModule({
@@ -20,8 +18,6 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     ListOfStudentComponent,
     AddSudentInfoComponent,
     EditStudentComponent,
-    LoginComponent,
-    RegisterUserComponent,
   
   ],
   imports: [

@@ -4,6 +4,7 @@ import { ListOfStudentComponent } from './list-of-student/list-of-student.compon
 import { AddSudentInfoComponent } from './add-sudent-info/add-sudent-info.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
 import{LoginComponent} from './login/login.component'
 import{RegisterUserComponent} from './register-user/register-user.component'
 
